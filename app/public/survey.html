@@ -130,7 +130,7 @@
          <!-- Submit Button -->
          <button type="submit" class="btn btn-success btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
          Submit</button>
-         <hr>
+         
       </div>
       <nav class="navbar navbar-inverse navbar-fixed-bottom  navbar-right">
          <div class="container-fluid">
@@ -148,7 +148,7 @@
             <div class="modal-content">
                <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h2 class="modal-title"><strong>BEST MATCH</strong></h2>
+                  <h2 class="modal-title"><strong></strong></h2>
                </div>
                <div class="modal-body">
                   <h2 id="match-name">Please Fill Out All Fields Before Submitting!</h2>
@@ -226,6 +226,7 @@
               $.post("/api/friends", userData, function(data) {
           
                 // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                $(".modal-title").text("Best Match");
                 $("#match-name").text((data.name).toUpperCase());
                 $("#match-img").attr("src", data.photo);
                 $("#match-img").css("width", "400px");
