@@ -9,29 +9,41 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
       <!-- Font Awesome Glyphicons -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-     <link href="/css/style.css" rel="stylesheet" type="text/css">
+     <link href="../css/style.css" rel="stylesheet" type="text/css">
+     <link href="https://fonts.googleapis.com/css?family=PT+Serif|Roboto+Slab|Slabo+27px" rel="stylesheet">
+
    </head>
    <body>
+     
+
       <div class="container">
-         <div class="jumbotron">
-            <h1><i class="fa fa-facebook-square" aria-hidden="true"></i> Friend Finder</h1>
+         <div class ="row">
+            <div class ="col-md-3"></div>
+            <div class="col-md-6 text-center">
+                <h1 id="header"><i class="fa fa-paw" aria-hidden="true"></i> PawsLikeMe's</h1>
             <hr>
-            <h2>Answer a few basic questions. </h2>
-            <h2>Then find the friend with the greatest compatibility!</h2>
+            <h3>Want help finding dog lovers just like you? </h3>
             <br>
             <div>
                <a href="/survey">
-                  <button type="button" class="btn btn-lg btn-primary">
-                     <h4><span class="glyphicon glyphicon-list-alt"></span> Go to Survey</h4>
+                  <button type="button" class="btn btn-lg btn-success">
+                     <h4><span class="glyphicon glyphicon-list-alt"></span>  Take the Survey  </h4>
                   </button>
                </a>
             </div>
-         </div>
-         <footer class="footer">
-            <div class="container">
-               <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/priyaA01/FriendFinder" target="_blank">GitHub Repo</a></p>
+
             </div>
-         </footer>
+         </div>
+      </div>
+      <nav class="navbar navbar-inverse navbar-fixed-bottom  navbar-right">
+           <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/home">Home</a></li>
+              <li><a href="/api/friends">API Friends List</a></li>
+              <li><a href="https://github.com/priyaA01/FriendFinder" target="_blank">Git Hub Repo</a></li>
+            </ul>
+          </div>
+         </nav>
       </div>
    </body>
 </html>

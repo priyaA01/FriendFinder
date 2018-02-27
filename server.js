@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-app.use(express.static(__dirname + '/public/'));
+app.use(express.static("app/public/"));
 
 
 require("./app/routing/apiRoutes")(app);
