@@ -20,10 +20,10 @@ module.exports = function (app) {
     var userPhoto = userData.photo;
     var userScores = userData.scores;
     var totalDifference = 0;
-    console.log(req.body);
+    //console.log(req.body);
     //loop through scores of survery
     for (var i = 0; i < friends.length; i++) {
-     // console.log(friends[i].name);
+      // console.log(friends[i].name);
       totalDifference = 0;
       // loop throught to calculate difference
       for (var j = 0; j < 10; j++) {

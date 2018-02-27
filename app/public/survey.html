@@ -21,9 +21,9 @@
          <hr>
          <h3><strong>About You</strong></h3>
          <h4>Name (Required)</h4>
-         <input type="text" id="name" class="form-control" required>
-         <h4>Link to Your Photo Image (Required)</h4>
-         <input type="text" id="photo" class="form-control" required>
+         <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+         <h4>Link to Photo Image (Required)</h4>
+         <input type="text" id="photo" class="form-control" placeholder="Your Photo" required>
          <hr>
          <h3><strong>Question 1</strong></h3>
          <h4>You enjoy light activity with your dog, such as walk around the block.</h4>
@@ -131,17 +131,16 @@
          <button type="submit" class="btn btn-success btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
          Submit</button>
          <hr>
-         
       </div>
       <nav class="navbar navbar-inverse navbar-fixed-bottom  navbar-right">
-           <div class="container-fluid">
+         <div class="container-fluid">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="/home">Home</a></li>
-              <li><a href="/api/friends">API Friends List</a></li>
-              <li><a href="https://github.com/priyaA01/FriendFinder" target="_blank">Git Hub Repo</a></li>
+               <li><a href="/home">Home</a></li>
+               <li><a href="/api/friends" target="_blank">API Friends List</a></li>
+               <li><a href="https://github.com/priyaA01/FriendFinder" target="_blank">Git Hub Repo</a></li>
             </ul>
-          </div>
-         </nav>
+         </div>
+      </nav>
       <!-- Modal -->
       <div id="results-modal" class="modal fade" role="dialog">
          <div class="modal-dialog">
@@ -149,14 +148,15 @@
             <div class="modal-content">
                <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h2 class="modal-title"><strong>Best Match</strong></h2>
+                  <h2 class="modal-title"><strong>BEST MATCH</strong></h2>
                </div>
                <div class="modal-body">
-                  <h2 id="match-name"></h2>
-                  <img id="match-img" src="https://naturewatch.org/files/uploads/pet_animals470x315.jpg" alt="Animals">
+                  <h2 id="match-name">Please Fill Out All Fields Before Submitting!</h2>
+                  <!-- <h3> has weird Picture, never mind! </h3> -->
+                  <img id="match-img" class="img-responsive" src="https://naturewatch.org/files/uploads/pet_animals470x315.jpg" alt="Animals">
                </div>
                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-success" id="close" data-dismiss="modal">Close</button>
                </div>
             </div>
          </div>
@@ -223,20 +223,22 @@
                   $("#q10").val()
                 ]
               };
-              var currentURL = window.location.origin;
               // AJAX post the data to the friends API.
               $.post("/api/friends", userData, function(data) {
           
                 // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                $("#match-name").text(data.name);
+                $("#match-name").text((data.name).toUpperCase());
                 $("#match-img").attr("src", data.photo);
-          
+                $("#match-img").css("width", "400px");
+                $("#match-img").css("height", "300px");
                 // Show the modal with the best match
                 $("#results-modal").modal("toggle");
+                
           
               });
             } else {
-              alert("PLEASE FILL OUT ALL FIELDS BEFORE SUBMITTING!");
+              $(".modal-title").text("ERROR");
+              $("#results-modal").modal("toggle");
             }
           });
       </script>

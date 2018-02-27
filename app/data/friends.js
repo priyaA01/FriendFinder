@@ -16,7 +16,7 @@ var friends = [{
      5
    ]
 }, {
-  "name":"pig",
+  "name":"Peppa",
   "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfvBqMczYQABn38zo2qmIRVX7ChtZxDmLjRG6DH1gSSTs0a-6A",
   "scores":[
      1,
@@ -31,7 +31,7 @@ var friends = [{
      5
    ]
 }, {
-  "name":"dog",
+  "name":"Danny",
   "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuL4OruUA77RZTVhb7D7tJceGV8fyZp3WaCSut0KtfghcBB60d",
   "scores":[
      3,
@@ -46,7 +46,7 @@ var friends = [{
      4
    ]
 }, {
-    "name":"tortoise",
+    "name":"Turner",
   "photo":"https://cdn.images.express.co.uk/img/dynamic/128/590x/secondary/tortoise-891219.jpg",
   "scores":[
      1,
@@ -61,7 +61,7 @@ var friends = [{
      2
    ]
 }, {
-   "name":"cat",
+   "name":"Katy",
   "photo":"https://images.pexels.com/photos/236230/pexels-photo-236230.jpeg?h=350&auto=compress&cs=tinysrgb",
   "scores":[
      5,
@@ -76,7 +76,7 @@ var friends = [{
      5
    ]
 }, {
-  "name":"squirrel",
+  "name":"Sasha",
   "photo":"http://uploads.neatorama.com/images/posts/962/90/90962/1466137824-0.jpg",
   "scores":[
      2,
@@ -91,7 +91,7 @@ var friends = [{
      2
    ]
 }, {
-  "name":"bunny",
+  "name":"Ben",
   "photo":"http://globalmedicalco.com/photos/globalmedicalco/1/3586.jpg",
   "scores":[
      3,

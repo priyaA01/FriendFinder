@@ -1,18 +1,23 @@
-body{
+body {
 	background-color: lightgreen;
-	padding-bottom:30px;
-
+	padding-bottom: 30px;
 }
 
-h1,h2,h3,h4{
-	
+.modal{
+	background-color: lightgreen;
+}
+
+h1,
+h2,
+h3,
+h4 {
 	font-family: 'PT Serif', serif;
 }
 
-#header{
-	margin-top:50px;
+#header {
+	margin-top: 50px;
 }
 
-hr{
-	border:1px solid black;
+hr {
+	border: 1px solid black;
 }
